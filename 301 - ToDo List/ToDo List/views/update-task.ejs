@@ -1,0 +1,61 @@
+<%# Student Name: Christopher Bell
+Program Name: ToDo List
+Creation Date: Mar. 26, 2018
+Last Modified Date: April. 24, 2018
+CSCI Course: 301
+Grade Received: 90/100 %>
+
+<% include partials/header %>
+
+<div class="container">
+
+    <h2>Update Task</h2>
+
+    <p><a href="/">Home</a><p>
+
+    <form>
+        <input type="hidden" name="task_id" id="task_id" value="<%= task._id %>">
+        <div class="form-group">
+            <label for="taskTitle">Task Title</label>
+            <input type="text" name="taskTitle" id="taskTitle" value="<%= task.taskTitle %>">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" value="<%= task.description %>">
+        </div>
+
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" name="status" id="status" value="<%= task.status %>">
+        </div>
+
+        <a href="#" class="btn btn-success" id="update">Save</a>
+    </form>
+
+</div>
+
+<script>
+$(document).ready(function () {
+    $('#update').on('click', updateStudent)
+})
+
+function updateTask () {
+    var task = {
+        "id": $('#task_id').val(),
+        "taskTitle": $('#taskTitle').val(),
+        "description": $('#description').val(),
+        "status": $('#status').val()
+    }
+    $.ajax({
+        type: 'PUT',
+        url: '/todo/update',
+        data: task
+    }).done(function (response) {
+        window.location.replace('/')
+    })
+    window.location.replace('/')
+}
+</script>
+
+<% include partials/footer %>

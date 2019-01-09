@@ -1,0 +1,53 @@
+<%# Student Name: Christopher Bell
+Program Name: ToDo List
+Creation Date: Mar. 26, 2018
+Last Modified Date: April. 24, 2018
+CSCI Course: 301
+Grade Received: 90/100 %>
+
+<% include partials/header %>
+
+<div class="container">
+	<h1>TODO App</h1>
+	<p>This is an app that lets you log and keep track of items on a todo list.</p>
+
+  <h3>Tasks</h3>
+  <ul>
+        <% todo.forEach(function (task) { %>
+            <li>
+                <%= task.taskTitle %>
+                <a href="#" class="updateTask" data-id="<%= task._id %>">Update</a>
+                <a href="#" class="deleteTask" data-id="<%= task._id %>">Delete</a>
+            </l1>
+            <ul>
+                <li>Description: <%= task.description %></li>
+                <li>Status: <%= task.status %></li>
+            </ul>
+        <% }) %>
+    </ul>
+
+    <h3>Add Task</h3>
+
+
+  <form method="POST" action="/todo/add">
+  	<div class="form-group">
+  		<label for="task_title">Task Title</label>
+  		<input type="text" name="task_title" id="task_title" placeholder="Title">
+  	</div>
+
+  	<div class="form-group">
+  		<label for="task_description">Description</label>
+  		<input type="text" name="task_description" id="task_description" placeholder="Description">
+  	</div>
+
+  	<div class="form-group">
+  		<label for="status">Status</label>
+  		<input type="text" name="status" id="status" placeholder="Status">
+  	</div>
+
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+
+<% include partials/footer %>
