@@ -5,6 +5,8 @@ Last Modified Date: Nov. 28, 2018
 CSCI Course: 495
 Grade Received: 100/100
 
+To install program, run the .exe file included in this folder.
+
 ======== PROJECT BACKGROUND AND CONTEXT ========
 
 For our software development team simulation class CSCI-495, our Grey Team was asked to create a Code Plagiarism Checker, where we will take two text files and compare them to one another and return a percentage of how those two files are similar to one another. Throughout this process we had created various documents to guide our design as if we were a true development team, keeping up with deadlines assigned from our "Customer/Project Overseer" Julie Henderson. We held weekly meetings with Prof. Henderson where we would check in on our progress through Google Hangouts Video Conferencing, raising concerns and sharing developments and next steps following the SDLC development process.
