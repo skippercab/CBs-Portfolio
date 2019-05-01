@@ -1,0 +1,38 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+        <% if current_user.team_name?%>
+          <p>Team Name: <%= @user.team_name %></p>
+        
+          <p>Team Members: </p>
+          <table>
+            <thead>
+              <tr>
+              <th>Name</th>
+              <th>Email Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @users %>
+                <tr>
+                <% @users.each do |user| %>
+                  <% if user.team_name == current_user.team_name %>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                  <% end %>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+          
+        <% end %>
+      </h1>
+      
+    </section>
+  </aside>
+</div>

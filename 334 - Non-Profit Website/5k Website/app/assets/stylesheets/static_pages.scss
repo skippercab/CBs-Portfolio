@@ -1,0 +1,43 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  border-collapse: collapse;
+  align:center;
+}
+tr, th{
+  border:1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+tr:nth-child(even){
+  background-color:#fff;
+}
+tr:nth-child(odd){
+  background-color:#eee;
+}
+
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.left{
+  left:0;
+  width:30%;
+}
+.right{
+  right:0;
+   width: 70%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
