@@ -1,4 +1,4 @@
 # Christopher Bell's Portfolio
-A collection of projects made over time in my Computer Science career. 
+A collection of projects made over time in my Computer Science career. The folders are organized by Charleston Southern University's class code and the name of the project inside of it. 
 
-Last update to Resume - May 2019.
+Resume is included as a PDF. Last update to Resume - May 2019.
