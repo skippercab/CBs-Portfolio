@@ -5,7 +5,7 @@ Last Modified Date: Nov. 28, 2018
 CSCI Course: 495
 Grade Received: 100/100
 
-To install program, run the .exe file included in this folder.  
+To install program, run the .exe file included in this folder.
 
 ======== PROJECT BACKGROUND AND CONTEXT ========
 
